@@ -9,7 +9,7 @@ $(document).on('keypress', () => {
     if (level == 0) {
         isGameOver = false;
         level++;
-        $("#level-title").text("Level " + level);
+        $("#level-title").text(`Level ${level}`);
         nextSequence();
     }
 });
@@ -47,7 +47,7 @@ $(".btn").on('click', async (event) => {
     if (userChoice.length == game.length) {
         userChoice = [];
         level++;
-        $("#level-title").text("Level " + level);
+        $("#level-title").text(`Level ${level}`);
         await sleep(500);
         nextSequence();
     }
