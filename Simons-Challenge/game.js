@@ -14,9 +14,16 @@ $(document).on('keypress', () => {
     }
 });
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function nextSequence(){
     sequencePlaying = true;
-    game.push(colors[Math.floor(Math.random() * 4)]);
+    game.push(colors[getRandomInt(0, 3)]);
     showSequence();
 }
 
